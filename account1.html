@@ -1,126 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>command page</title>
-<meta name="viewport" content="width-device-width,initial-scale=0.1">
-<script src="script.js"> </script>
-<link rel="stylesheet" href="css/account.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="script.js"></script>
+  <title>Register Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(to right, #f3e5c3, #174e4f);
+      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    table {
+      width: 100%;
+      max-width: 450px;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      background: #ffffff;
+      padding: 20px;
+    }
+    .title {
+      color: #00274d;
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      padding: 10px 0;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 10px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .input-pair {
+      display: flex;
+      gap: 10px;
+    }
+    .input-pair input {
+      width: 100%;
+    }
+    .s {
+      width: auto;
+      margin-right: 10px;
+    }
+    .hide {
+      color: red;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
+    button {
+      width: 100%;
+      border: none;
+      background: #00274d;
+      border-radius: 99px;
+      padding: 10px 0;
+      color: rgb(252, 252, 252);
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    a {
+      color: #00274d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    p {
+      text-align: center;
+      margin-top: 20px;
+    }
+    nav img {
+      margin: 10px;
+    }
+    @media (max-width: 600px) {
+      .input-pair {
+        flex-direction: column;
+      }
+      table {
+        margin: 20px;
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-<a href="home.html"><img src="icon/home.png" height="30px" width="30px" /></a>
+
+<a href="home.html"><img src="icon/home.png" height="30" width="30" /></a>
+
 <form action="php/account.php" method="post">
-<table>
-<tr><td  class="title">Register</td></tr>
-<tr>
-  <td ><input  class="input" type="text" name="fname" placeholder="first name" id="fname"/>
-<input class="input" type="text" name="lname" placeholder="last name" id="lname"/></td>
-</tr>
-<tr>
-  <td id="names"></td>
-</tr>
-<tr>
-  <td ><input type="Number" name="age" placeholder="age" id="age"/></td>
-</tr>
-<tr>
-  <td id="ageE"></td>
-</tr>
-<tr>
-<td >
-<select  name="wilaya" id="wila">
- <option value="adrar">adrar</option>
- <option value="chlef">chlef</option>
- <option value="agouat">agouat</option>
- <option value="om el boaki">om el boaki</option>
- <option value="batna">batna</option>
- <option value="bejaia">bejaia</option>
- <option value="biskra">biskra</option>
- <option value="bachar">bachar</option>
- <option value="blida">blida</option>
- <option value="bouira">bouira</option>
- <option value="tamnrast">tamnrast</option>
- <option value="tebssa">tebssa</option>
- <option value="telmcan">telmcan</option>
- <option value="tiaret">tiaret</option>
- <option value="tiziouzo">tiziouzo</option>
- <option value="alger">alger</option>
- <option value="djelfa">djelfa</option>
- <option value="djijel">djijel</option>
- <option value="setif">setif</option>
- <option value="saida">saida</option>
- <option value="skikda">skikda</option>
- <option value="sidi bel abbas">sidi bel abbas</option>
- <option value="annaba">annaba</option>
- <option value="gelma">gelma</option>
- <option value="costontine">costontine</option>
- <option value="elmdia">elmdia</option>
- <option value="mostaganum">mostaganum</option>
- <option value="msila">msila</option>
- <option value="masskar">masskar</option>
- <option value="orgla">orgla</option>
- <option value="oran">oran</option>
- <option value="baydth">baydth</option>
- <option value="ilizi">ilizi</option>
- <option value="bourdj bou ariridj">bourdj bou ariridj</option>
- <option value="bomerdas">bomerdas</option>
- <option value="taref">taref</option>
- <option value="tindouf">tindouf</option>
- <option value="tismsilt">tismsilt</option>
- <option value="el ouadi">el ouadi</option>
- <option value="khanchla">khanchla</option>
- <option value="soug ahrass">soug ahrass</option>
- <option value="tibaza">tibaza</option>
- <option value="mila">mila</option>
- <option value="ain defla">ain defla</option>
- <option value="el naama">el naama</option>
- <option value="ain timochnt">ain timochnt</option>
- <option value="ghardaia">ghardaia</option>
- <option value="ghilizan">ghilizan</option>
- <option value="timimoun">timimoun</option>
- <option value="bourdj baji mokhtar">bourdj baji mokhtar</option>
- <option value="beni abbas">beni abbas</option>
- <option value="ouled djlel">ouled djlel</option>
- <option value="ain saleh">ain saleh</option>
- <option value="ain gezzam">ain gezzam</option>
- <option value="togert">togert</option>
- <option value="djanet">djanet</option>
- <option value="el moghyr">el moghyr</option>
- <option value="mniaa">mniaa</option>
-</select>
-</td>
-</tr>
-<tr><td><input  type="Tel" name="phone" placeholder="Phone" id="phone"/></td></tr>
-<tr>
-  <td id="phoneE"></td>
-</tr>
-<tr><td><input  type="Email" name="email" placeholder="email" id="email"/></td></tr>
-<tr>
-  <td id="emailE"></td>
-</tr>
-<tr><td><textarea   row="6" cols="21" placeholder="Addres"  id="addres" name="addres"></textarea></td></tr>
-<tr>
-  <td id="addE"></td>
-</tr>
-<tr><td><input  type="Password" name="password" placeholder="Password" id="pass"/></td></tr>
-<tr>
-  <td id="passE"></td>
-</tr>
-<tr><td><input  type="Password" name="confirm password" placeholder="confirm Password" id="cpass"/></td></tr>
-<tr>
-  <td id="cpassE"></td>
-</tr>
-<tr><td style="color: #00274d;">sexe:<input class="s" type="Radio" name="sex" value="Man">Man</input><input class="s" type="Radio" name="sex" value="Woman" >Woman</input></td></tr>
-<tr><td><button type="Submit" onclick="return ValidationInfo()" >   Submit   </button></td></tr>
-<tr><td style="color: aliceblue; text-align: center; ">already hav an account ! <a style="color: #00274d;" href="login.html">Signin</a></td></tr>
-</table>
+  <table>
+    <tr><td class="title">Register</td></tr>
+
+    <tr>
+      <td>
+        <div class="input-pair">
+          <input type="text" name="fname" placeholder="First name" id="fname"/>
+          <input type="text" name="lname" placeholder="Last name" id="lname"/>
+        </div>
+      </td>
+    </tr>
+    <tr><td id="names" class="hide"></td></tr>
+
+    <tr><td><input type="number" name="age" placeholder="Age" id="age"/></td></tr>
+    <tr><td id="ageE" class="hide"></td></tr>
+
+    <tr>
+      <td>
+        <select name="wilaya" id="wila">
+          <option value="">-- Select Wilaya --</option>
+          <option value="adrar">Adrar</option>
+          <option value="chlef">Chlef</option>
+          <option value="laghouat">Laghouat</option>
+          <option value="oum el bouaghi">Oum El Bouaghi</option>
+          <option value="batna">Batna</option>
+          <option value="bejaia">Bejaia</option>
+          <option value="biskra">Biskra</option>
+          <option value="bechar">Bechar</option>
+          <option value="blida">Blida</option>
+          <option value="bouira">Bouira</option>
+          <option value="tamanrasset">Tamanrasset</option>
+          <option value="tebessa">Tébessa</option>
+          <option value="tlemcen">Tlemcen</option>
+          <option value="tiaret">Tiaret</option>
+          <option value="tizi ouzou">Tizi Ouzou</option>
+          <option value="algiers">Algiers</option>
+          <option value="djelfa">Djelfa</option>
+          <option value="jijel">Jijel</option>
+          <option value="setif">Sétif</option>
+          <option value="saida">Saïda</option>
+          <option value="skikda">Skikda</option>
+          <option value="sidi bel abbes">Sidi Bel Abbès</option>
+          <option value="annaba">Annaba</option>
+          <option value="guelma">Guelma</option>
+          <option value="constantine">Constantine</option>
+          <option value="medea">Médéa</option>
+          <option value="mostaganem">Mostaganem</option>
+          <option value="msila">M'sila</option>
+          <option value="mascara">Mascara</option>
+          <option value="ouargla">Ouargla</option>
+          <option value="oran">Oran</option>
+          <option value="el bayadh">El Bayadh</option>
+          <option value="illizi">Illizi</option>
+          <option value="bordj bou arreridj">Bordj Bou Arréridj</option>
+          <option value="boumerdes">Boumerdès</option>
+          <option value="el tarf">El Tarf</option>
+          <option value="tindouf">Tindouf</option>
+          <option value="tissemsilt">Tissemsilt</option>
+          <option value="el oued">El Oued</option>
+          <option value="khenchela">Khenchela</option>
+          <option value="souq ahras">Souk Ahras</option>
+          <option value="tipaza">Tipaza</option>
+          <option value="mila">Mila</option>
+          <option value="ain defla">Aïn Defla</option>
+          <option value="naama">Naâma</option>
+          <option value="ain temouchent">Aïn Témouchent</option>
+          <option value="ghardaia">Ghardaïa</option>
+          <option value="relizane">Relizane</option>
+          <option value="timimoun">Timimoun</option>
+          <option value="bordj badji mokhtar">Bordj Badji Mokhtar</option>
+          <option value="beni abbes">Béni Abbès</option>
+          <option value="ouled djellal">Ouled Djellal</option>
+          <option value="ain salah">Aïn Salah</option>
+          <option value="ain guezzam">Aïn Guezzam</option>
+          <option value="touggourt">Touggourt</option>
+          <option value="djanet">Djanet</option>
+          <option value="el meghaier">El M'Ghair</option>
+          <option value="el menia">El Meniaa</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr><td><input type="tel" name="phone" placeholder="Phone" id="phone"/></td></tr>
+    <tr><td id="phoneE" class="hide"></td></tr>
+
+    <tr><td><input type="email" name="email" placeholder="Email" id="email"/></td></tr>
+    <tr><td id="emailE" class="hide"></td></tr>
+
+    <tr><td><textarea rows="3" placeholder="Address" id="addres" name="addres"></textarea></td></tr>
+    <tr><td id="addE" class="hide"></td></tr>
+
+    <tr><td><input type="password" name="password" placeholder="Password" id="pass"/></td></tr>
+    <tr><td id="passE" class="hide"></td></tr>
+
+    <tr><td><input type="password" name="confirm_password" placeholder="Confirm Password" id="cpass"/></td></tr>
+    <tr><td id="cpassE" class="hide"></td></tr>
+
+    <tr>
+      <td style="color: #00274d;">Sexe:
+        <input class="s" type="radio" name="sex" value="Man">Man
+        <input class="s" type="radio" name="sex" value="Woman">Woman
+      </td>
+    </tr>
+
+    <tr><td><button type="submit" onclick="return ValidationInfo()">Submit</button></td></tr>
+
+    <tr><td style="color: #00274d; text-align: center;">Already have an account? <a href="login.html">Sign in</a></td></tr>
+  </table>
 </form>
+
 <div style="text-align:center">
-   <nav>
-   <p>
-   <a href="#"><img src="icon/customer.png" height="30px" width="30px" style=" margin-right:25px;"/></a> 
-   <a href="#"><img src="icon/facbook.png" height="30px" width="30px" style=" margin-right:10px;"/></a>    
-   <a href="#"><img src="icon/gmail.png" height="30px" width="30px" style=" margin-left:10px;"/></a>    
-   <a href="#"><img src="icon/insta.png" height="30px" width="30px" style=" margin-left:25px;"/></a>   
-   </p>
-</nav>
+  <nav>
+    <p>
+      <a href="#"><img src="icon/customer.png" height="30" width="30" /></a> 
+      <a href="#"><img src="icon/facbook.png" height="30" width="30" /></a>    
+      <a href="#"><img src="icon/gmail.png" height="30" width="30" /></a>    
+      <a href="#"><img src="icon/insta.png" height="30" width="30" /></a>   
+    </p>
+  </nav>
+</div>
+
 </body>
 </html>
