@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>command page</title>
+<meta name="viewport" content="width-device-width,initial-scale=0.1">
+<script src="script.js"> </script>
+<link rel="stylesheet" href="css/command.css" />
+</head>
+<body>
+<a href="home.html"><img src="icon/home.png" height="30px" width="30px" /></a>
+<form onsubmit="return validOrder()" action="php/order.php" method="post">
+<table>
+<tr><td colspan="4" id="image" ></td></tr>
+<tr><td class="d" id="name"></td></tr>
+<tr><td class="s" id="price"></td></tr>
+<tr><td class="weight">
+  <span class="s">size:</span>
+  <input type="checkbox" id="500g" name="size[]" value="500g" class="s-check" checked ><label for="500g">500g</label>
+  <input type="checkbox" id="1000g" name="size[]" value="1000g"  class="s-check"><label for="1000g">1000g</label>
+</td></tr>
+<tr><td class="quantity" ><span class="s" >Quantity:</span><input type="number" name="quantity" id="Qnt"></td></tr>
+<tr>
+  <td id="QntE"></td>
+</tr>
+
+<tr><td><button type="submit">Buy now</button></td></tr>
+</table>
+</form>
+<div style="text-align:center">
+   <nav>
+   <p>
+      <a href="#"><img src="icon/customer.png" height="30px" width="30px" style=" margin-right:25px;"/></a> 
+      <a href="#"><img src="icon/facbook.png" height="30px" width="30px" style=" margin-right:10px;"/></a>    
+      <a href="#"><img src="icon/gmail.png" height="30px" width="30px" style=" margin-left:10px;"/></a>    
+      <a href="#"><img src="icon/insta.png" height="30px" width="30px" style=" margin-left:25px;"/></a>   
+   </p>
+   </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+.product-gridt1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .product-gridt2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .product-gridt3{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .product-card {
+    background-color: #fde1e1;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 220px;
+    flex: 1 1 220px;
+    transition: transform 0.3s;
+    
+  }
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  .product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1px solid black;
+  }
+  .product-info {
+    padding: 10px;
+    text-align: center;
+  }
+  .product-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #0a0707;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .product-disc {
+    font-size: 15px;
+    margin-top: 15px;
+    color: #000000;
+    font-weight: bold;
+  }
+  @media (max-width: 600px) {
+    .product-card {
+      max-width: 45%;
+      flex: 1 1 100%;
+    }
+  }
+  .container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 15px;
+  }
+  .bar{
+position:fixed;
+top: 50px;;
+right:0;
+height:100%;
+width:100px;
+background-color:rgba(255,255,255,0.6);
+backdrop-filter:blur(10px);
+box-shadow:-10px 0 10px rgba(0,0,0,0.1);
+display:none;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+}
+nav li{
+width:100%;
+display:flex;
+justify-content:flex-end;
+}
+nav a{
+height:100%;
+text-decoration:none;
+display:flex;
+align-items:center;
+color:#000000;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.close{
+    height:15px;
+    width:15px;
+    margin-top:20px ;
+    margin-right:5px;
+}
+.am{
+    margin-top:30px ; 
+    padding:0 5px;
+}
+.am:hover{
+    margin-top:30px ; 
+    padding:0 5px;
+    font-size: large;
+}
+.m{
+    margin-top:30px ; 
+    padding:0 5px;
+}
+.nav{
+  background-color: black;
+  width: 94%;
+  margin-top: 10px;
+  margin:5px 3% 3% 0;
+  padding: 10px;
+  border-radius:  20px; ;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.nav ul li {
+    margin: 0 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 4px 30px;
+}
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.nav li :hover{
+    background-color:white ;
+    margin: 0 0px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 4px;
+    color: black;
+}
+.h1{
+  width: 98%;
+  border-radius: 99px;
+  text-align: center;
+  background-color: #000000;
+  color: aliceblue;
+  margin-bottom: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 4px;
+
+}

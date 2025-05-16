@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ecomarket - Welcome</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      background: linear-gradient(to right, #f3e5c3, #174e4f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fdfdfd;
+      overflow: hidden;
+      direction: rtl; 
+    }
+
+    .intro-container {
+      text-align: center;
+      animation: fadeIn 2s ease;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    .intro-container h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .intro-container p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
+
+    .btn-enter {
+      background-color: white;
+      color: #2ebf91;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-enter:hover {
+      background-color: #e0e0e0;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-container">
+    <h1>Welcome to Ecomarket</h1>
+    <p>Your best destination for online shopping in Algeria</p>
+    <a href="index.html" class="btn-enter">Enter the Site</a>
+  </div>
+
+</body>
+</html>

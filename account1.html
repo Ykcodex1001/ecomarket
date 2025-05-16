@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>command page</title>
+<meta name="viewport" content="width-device-width,initial-scale=0.1">
+<script src="script.js"> </script>
+<link rel="stylesheet" href="css/account.css" />
+</head>
+<body>
+<a href="home.html"><img src="icon/home.png" height="30px" width="30px" /></a>
+<form action="php/account.php" method="post">
+<table>
+<tr><td  class="title">Register</td></tr>
+<tr>
+  <td ><input  class="input" type="text" name="fname" placeholder="first name" id="fname"/>
+<input class="input" type="text" name="lname" placeholder="last name" id="lname"/></td>
+</tr>
+<tr>
+  <td id="names"></td>
+</tr>
+<tr>
+  <td ><input type="Number" name="age" placeholder="age" id="age"/></td>
+</tr>
+<tr>
+  <td id="ageE"></td>
+</tr>
+<tr>
+<td >
+<select  name="wilaya" id="wila">
+ <option value="adrar">adrar</option>
+ <option value="chlef">chlef</option>
+ <option value="agouat">agouat</option>
+ <option value="om el boaki">om el boaki</option>
+ <option value="batna">batna</option>
+ <option value="bejaia">bejaia</option>
+ <option value="biskra">biskra</option>
+ <option value="bachar">bachar</option>
+ <option value="blida">blida</option>
+ <option value="bouira">bouira</option>
+ <option value="tamnrast">tamnrast</option>
+ <option value="tebssa">tebssa</option>
+ <option value="telmcan">telmcan</option>
+ <option value="tiaret">tiaret</option>
+ <option value="tiziouzo">tiziouzo</option>
+ <option value="alger">alger</option>
+ <option value="djelfa">djelfa</option>
+ <option value="djijel">djijel</option>
+ <option value="setif">setif</option>
+ <option value="saida">saida</option>
+ <option value="skikda">skikda</option>
+ <option value="sidi bel abbas">sidi bel abbas</option>
+ <option value="annaba">annaba</option>
+ <option value="gelma">gelma</option>
+ <option value="costontine">costontine</option>
+ <option value="elmdia">elmdia</option>
+ <option value="mostaganum">mostaganum</option>
+ <option value="msila">msila</option>
+ <option value="masskar">masskar</option>
+ <option value="orgla">orgla</option>
+ <option value="oran">oran</option>
+ <option value="baydth">baydth</option>
+ <option value="ilizi">ilizi</option>
+ <option value="bourdj bou ariridj">bourdj bou ariridj</option>
+ <option value="bomerdas">bomerdas</option>
+ <option value="taref">taref</option>
+ <option value="tindouf">tindouf</option>
+ <option value="tismsilt">tismsilt</option>
+ <option value="el ouadi">el ouadi</option>
+ <option value="khanchla">khanchla</option>
+ <option value="soug ahrass">soug ahrass</option>
+ <option value="tibaza">tibaza</option>
+ <option value="mila">mila</option>
+ <option value="ain defla">ain defla</option>
+ <option value="el naama">el naama</option>
+ <option value="ain timochnt">ain timochnt</option>
+ <option value="ghardaia">ghardaia</option>
+ <option value="ghilizan">ghilizan</option>
+ <option value="timimoun">timimoun</option>
+ <option value="bourdj baji mokhtar">bourdj baji mokhtar</option>
+ <option value="beni abbas">beni abbas</option>
+ <option value="ouled djlel">ouled djlel</option>
+ <option value="ain saleh">ain saleh</option>
+ <option value="ain gezzam">ain gezzam</option>
+ <option value="togert">togert</option>
+ <option value="djanet">djanet</option>
+ <option value="el moghyr">el moghyr</option>
+ <option value="mniaa">mniaa</option>
+</select>
+</td>
+</tr>
+<tr><td><input  type="Tel" name="phone" placeholder="Phone" id="phone"/></td></tr>
+<tr>
+  <td id="phoneE"></td>
+</tr>
+<tr><td><input  type="Email" name="email" placeholder="email" id="email"/></td></tr>
+<tr>
+  <td id="emailE"></td>
+</tr>
+<tr><td><textarea   row="6" cols="21" placeholder="Addres"  id="addres" name="addres"></textarea></td></tr>
+<tr>
+  <td id="addE"></td>
+</tr>
+<tr><td><input  type="Password" name="password" placeholder="Password" id="pass"/></td></tr>
+<tr>
+  <td id="passE"></td>
+</tr>
+<tr><td><input  type="Password" name="confirm password" placeholder="confirm Password" id="cpass"/></td></tr>
+<tr>
+  <td id="cpassE"></td>
+</tr>
+<tr><td style="color: #00274d;">sexe:<input class="s" type="Radio" name="sex" value="Man">Man</input><input class="s" type="Radio" name="sex" value="Woman" >Woman</input></td></tr>
+<tr><td><button type="Submit" onclick="return ValidationInfo()" >   Submit   </button></td></tr>
+<tr><td style="color: aliceblue; text-align: center; ">already hav an account ! <a style="color: #00274d;" href="login.html">Signin</a></td></tr>
+</table>
+</form>
+<div style="text-align:center">
+   <nav>
+   <p>
+   <a href="#"><img src="icon/customer.png" height="30px" width="30px" style=" margin-right:25px;"/></a> 
+   <a href="#"><img src="icon/facbook.png" height="30px" width="30px" style=" margin-right:10px;"/></a>    
+   <a href="#"><img src="icon/gmail.png" height="30px" width="30px" style=" margin-left:10px;"/></a>    
+   <a href="#"><img src="icon/insta.png" height="30px" width="30px" style=" margin-left:25px;"/></a>   
+   </p>
+</nav>
+</body>
+</html>
