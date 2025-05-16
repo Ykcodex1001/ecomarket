@@ -76,7 +76,7 @@ outline:3px solid;
 }
  @media (max-width: 600px) {
     table{
-        width:auto;
+        width:80%;
         height: auto;
     }
  }
