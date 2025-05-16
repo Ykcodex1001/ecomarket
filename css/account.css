@@ -82,7 +82,7 @@ select
 }
  @media (max-width: 600px) {
     table{
-        width: auto;
+        width: 90%;
         height: auto;
     }
  }
