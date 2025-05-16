@@ -5,8 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="script.js"> </script>
 <link rel="stylesheet" href="css/command.css" />
+  <link rel="stylesheet" href="css/head.css" />
 </head>
 <body>
+     <header>
+    <div class="header-container">
+        <a href="home.html" class="menu-toggle" id="menuToggle" ><img src="icon/shop.png"></a>
+        <div class="toast-container" id="toastContainer"></div>
+        <ul class="nav-buttons" id="navButtons">
+        </ul>
+        <div class="logo-container">
+            <span class="meny"><img src="image/logo.jpg"></span>
+        </div>
+    </div>
+</header>
 <form onsubmit="return validOrder()" action="php/order.php" method="post">
 <table>
 <tr><td colspan="4" id="image" ></td></tr>
