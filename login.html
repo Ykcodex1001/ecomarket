@@ -1,34 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>command page</title>
-<meta name="viewport" content="width-device-width,initial-scale=0.1">
-<script src="script.js"> </script>
-<link rel="stylesheet" href="css/login.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Page</title>
+  <script src="script.js"></script>
+  <style>
+    /* Reset بسيط */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to right, #f3e5c3, #174e4f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      width: 90%;
+      max-width: 400px;
+    }
+
+    table {
+      width: 100%;
+      background: linear-gradient(to right, #f3e5c3, #103c1f);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      border-collapse: separate;
+      border-spacing: 0 15px;
+    }
+
+    table th,
+    table td {
+      padding: 0;
+    }
+
+    img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 15px;
+      box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+    }
+
+    input::placeholder {
+      color: rgba(12, 3, 3, 0.8);
+      font-weight: 500;
+    }
+
+    input:focus {
+      outline: 3px solid #00274d;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      background: black;
+      border-radius: 99px;
+      padding: 10px 0;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #00274d;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .hide {
+      color: red;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+      height: 18px; /* حتى لا يسبب تغيير ارتفاع عند ظهور الخطأ */
+    }
+
+    @media (max-width: 600px) {
+      table {
+        padding: 20px;
+        border-radius: 10px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+      }
+      img {
+        max-width: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
-<form    action="php\login.php"   method="post"> 
-<table >
-<tr><th colspan="2"><img src="icon\icon.png" /></th></tr>
-<tr>
-  <td>
-    <input  type="text" name="email" placeholder="E-mail" id="email" /></br>
-  </td>
-</tr>
-<tr>
-  <td id="emailE"></td>
-</tr>
-<tr>
-  <td>
-    <input  type="Password" name="password" placeholder="Password" id="pass"/></br>
-  </td>
-</tr>
-<tr>
-  <td id="passE"></td>
-</tr>
-<tr><td><button type="submit" onclick="return Validation()" >Log in</button ></td></tr>
-<tr><td colspan="2"><div style="text-align:center ; font-size:12px ;" >Don't have an account ? <a href="account1.html"> Register</a></div></td></tr>
-</table>
-</form> 
+  <form action="php/login.php" method="post" onsubmit="return Validation()">
+    <table>
+      <tr>
+        <th colspan="2">
+          <img src="icon/icon.png" alt="Logo" />
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" name="email" placeholder="E-mail" id="email" />
+        </td>
+      </tr>
+      <tr>
+        <td id="emailE" class="hide"></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="password" name="password" placeholder="Password" id="pass" />
+        </td>
+      </tr>
+      <tr>
+        <td id="passE" class="hide"></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="submit">Log in</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="font-size:12px; text-align:center;">
+          Don't have an account? <a href="account1.html">Register</a>
+        </td>
+      </tr>
+    </table>
+  </form>
 </body>
 </html>
