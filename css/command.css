@@ -1,106 +1,153 @@
-:root{
-  --bgbutton:black;
-  --text-color:white;
-  --bdcolor:#f3e5c3;
-  --label:#ddd;
+:root {
+  --bgbutton: black;
+  --text-color: white;
+  --bdcolor: #f3e5c3;
+  --label: #ddd;
 }
-  button{
+
+body {
+  background-color: var(--bdcolor);
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+
+button {
   width: 100%;
   border: none;
-  background:var(--bgbutton);
+  background: var(--bgbutton);
   border-radius: 99px;
-  padding:13px 50px;
-  color:var(--text-color);
-  font-weight:bold;
-  font-size: 12px;
+  padding: 13px 50px;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 14px;
   margin-bottom: 8px;
+  cursor: pointer;
 }
-table{
- background-color:var(--text-color);
- margin-top: 12%;
- margin-bottom: auto;
- margin-right: auto;
- margin-left: auto;
- border-radius:15px;
- width: 250px;
- border: 3px solid var(--bgbutton);
 
- 
+table {
+  background-color: var(--text-color);
+  margin: 12% auto;
+  border-radius: 15px;
+  width: 300px;
+  border: 3px solid var(--bgbutton);
+  padding: 10px;
 }
-body{
-  background-color:var(--bdcolor);
-}
-.img{
+
+
+.img {
   height: 200px;
   width: 200px;
-  margin-left:20px;
+  margin: 0 auto;
+  display: block;
 }
-.weight label{
+
+
+.weight label {
   display: inline-block;
   padding: 5px 15px;
-  margin: 0 15px;
+  margin: 0 5px;
   cursor: pointer;
   border: 1px solid var(--label);
   border-radius: 4px;
   transition: all 0.3s;
+  font-size: 14px;
 }
+
 .weight input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   z-index: -1;
-
 }
-.weight input[type="checkbox"]:checked+label {
+
+.weight input[type="checkbox"]:checked + label {
   background-color: var(--bgbutton);
   color: var(--text-color);
   border-color: var(--bgbutton);
 }
+
+
 .quantity {
   margin-bottom: 25px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-.quantity input{
-  width: 50px;
+
+.quantity input {
+  width: 60px;
   padding: 5px;
-  margin-left: 28px;
-  margin-top:8px ;
   text-align: center;
   border: 1px solid var(--label);
   border-radius: 4px;
 }
-.s{
-  margin-top: 7px;
+
+
+.s, .d {
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding: 5px 0px;
+  padding: 5px 0;
+  font-size: 15px;
 }
-.d{
-  margin-top: 7px;
-  text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding: 5px 0px;
+
+.d {
   border: 1px solid var(--bgbutton);
   border-radius: 15px;
+  margin-top: 7px;
 }
-.hide{
-  color:red;
-  font-size:14px;
+
+
+.hide {
+  color: red;
+  font-size: 14px;
   margin: 0;
   padding: 0;
 }
-.readonly{
+
+
+.readonly {
   background: none;
   border: none;
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size:medium;
-
-
+  font-size: medium;
 }
- @media (max-width: 600px) {
-    table{
-        width: 80%;
-        height: auto;
-    }
- }
+
+
+nav p a img {
+  margin: 0 10px;
+}
+
+
+@media (max-width: 600px) {
+  table {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .weight label {
+    margin: 5px 3px;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .quantity {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .quantity input {
+    margin-top: 8px;
+    margin-left: 0;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 10px 30px;
+  }
+}
